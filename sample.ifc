@@ -1,0 +1,20 @@
+ISO-10303-21;
+HEADER;
+FILE_DESCRIPTION(('Sample IFC 4 file'), '2;1');
+FILE_NAME('sample.ifc', '2022-03-01T08:00:00', (''), (''), 'Sample IFC 4 file', '', 'preprocessor');
+FILE_SCHEMA(('IFC4'));
+
+ENDSEC;
+
+DATA;
+#1=IFCPERSON('0', 'John', 'Smith', '', '', '', '', '', '');
+#2=IFCPERSON('0', 'Jane', 'Doe', '', '', '', '', '', '');
+#3=IFCCARTESIANPOINT((0.0, 0.0, 0.0));
+#4=IFCDIRECTION((1.0, 0.0, 0.0));
+#5=IFCDIRECTION((0.0, 1.0, 0.0));
+#6=IFCDIRECTION((0.0, 0.0, 1.0));
+#7=IFCAXIS2PLACEMENT3D(#3, #4, #5);
+#8=IFCWALLSTANDARDCASE('0', #7, 100.0, 200.0, 10.0, #6);
+#9=IFCPROJECT('0', #1, 'Sample Project', 'A sample IFC 4 project', #2, 'Building', 'Unknown', .ELEMENT., 1.0, $);
+ENDSEC;
+END-ISO-10303-21;
